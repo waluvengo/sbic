@@ -4,7 +4,11 @@ class StaffMembersController < ApplicationController
     @staff_member = Staff_member.find(params[:id])
   end
 
-  def new
+  def signin
+    @title = "Sign in"
+  end
+
+  def signup
     @title = "Sign up"
   end
 

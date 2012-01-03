@@ -3,13 +3,12 @@ Sbic::Application.routes.draw do
   resources :staff_members
   root :to => 'pages#home'
 
-  get "pages/about_us"
-
-  get "pages/services"
-
-  get "pages/help"
-
-  match '/signup',  :to => 'staff_members#new'
+  match '/about_us', :to => 'pages#about_us'
+  match '/help', :to => 'pages#help'
+  match '/services', :to => 'pages#services'
+  
+  match '/signup',  :to => 'staff_members#signup'
+  match '/signin',  :to => 'staff_members#signin'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

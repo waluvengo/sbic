@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Surrey Biodiversity Information Centre</title>
+  <title>Surrey Biodiversity Information Centre | <%= @title %></title>
     <%= csrf_meta_tag %>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,9 +20,11 @@
       <header>
         <nav class="round">
           <ul>
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "Help", '#' %></li>
-            <li><%= link_to "Sign in", '#' %></li>
+            <li><%= link_to "Home", root_path %></li>
+	    <li><%= link_to "About us", about_us_path %></li>
+            <li><%= link_to "Services", services_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+	    <li><%= link_to "Sign in", signin_path %></li>
           </ul>
         </nav>
       </header>
@@ -32,10 +34,8 @@
       <footer>
         <nav class="round">
           <ul>
-            <li><%= link_to "About", '#' %></li>
-            <li><%= link_to "Contact", '#' %></li>
-            <li><a href="http://news.railstutorial.org/">News</a></li>
-            <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+            <li><%= link_to "Home", root_path %></li>
+	    <li><%= link_to "About us", about_us_path %></li>
           </ul>
         </nav>
       </footer>
