@@ -1,11 +1,13 @@
 Sbic::Application.routes.draw do
   
-  resources :staff_members
+  
   root :to => 'pages#home'
+  resources :staff_members
 
   match '/about_us', :to => 'pages#about_us'
   match '/help', :to => 'pages#help'
   match '/services', :to => 'pages#services'
+
   
   match '/signup',  :to => 'staff_members#signup'
   match '/signin',  :to => 'staff_members#signin'

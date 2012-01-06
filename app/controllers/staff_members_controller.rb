@@ -1,7 +1,8 @@
 class StaffMembersController < ApplicationController
 
   def show
-    @staff_member = Staff_member.find(params[:id])
+    @staff_member = StaffMember.find(params[:id])
+    @title = @staff_member.surname
   end
 
   def signin
