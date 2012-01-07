@@ -182,3 +182,11 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+ul.staff_members {
+  margin-top: 1em;
+}
+
+.staff_members li {
+  list-style: none;
+}

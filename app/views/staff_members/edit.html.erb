@@ -1,10 +1,10 @@
-<h1>Sign up</h1>
+<h1>Edit Staff Member Details</h1>
 
 <%= form_for(@staff_member) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   
   <div class="field">
-    <%= f.label :staff_id, "Staff ID" %><br /> 
+    <%= f.label :staff_id %><br /> 
     <%= f.text_field :staff_id %>
   </div>
   <div class="field">
@@ -32,7 +32,11 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
 
+<div>
+  <%= gravatar_for @staff_member %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>

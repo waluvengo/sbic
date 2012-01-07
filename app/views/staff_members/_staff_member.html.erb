@@ -1,0 +1,8 @@
+<li>
+      <%= gravatar_for staff_member, :size => 30 %>
+  <%= link_to staff_member.surname, staff_member %>
+  <% if current_staff_member.admin? %>
+  | <%= link_to "delete", staff_member, :method => :delete, :confirm => "Are you sure you want to delete this user?",
+                                :title => "Delete #{staff_member.surname}" %>
+  <% end %>
+    </li>

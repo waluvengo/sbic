@@ -12,6 +12,10 @@ Sbic::Application.routes.draw do
   
   match '/signup',  :to => 'staff_members#new'
   match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

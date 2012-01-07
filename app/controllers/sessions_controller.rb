@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in staff_member
-      redirect_to staff_member
+      redirect_back_or staff_member
     end
   end
 
