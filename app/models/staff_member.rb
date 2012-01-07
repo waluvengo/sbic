@@ -38,6 +38,11 @@ class StaffMember < ActiveRecord::Base
     return staff_member if staff_member.has_password?(submitted_password)
   end
 
+  def self.authenticate_with_salt(id, cookie_salt)
+    staff_member = find_by_id(id)
+    (staff_member && staff_member.salt == cookie_salt) ? staff_member : nil
+  end
+
   private
 
     def encrypt_password

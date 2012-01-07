@@ -1,0 +1,12 @@
+<% if @staff_member.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@staff_member.errors.count, "error") %> 
+        prohibited this staff_member from being saved:</h2>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% @staff_member.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

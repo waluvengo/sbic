@@ -3,14 +3,15 @@ Sbic::Application.routes.draw do
   
   root :to => 'pages#home'
   resources :staff_members
+  resources :sessions, :only => [:new, :create, :destroy]
 
   match '/about_us', :to => 'pages#about_us'
   match '/help', :to => 'pages#help'
   match '/services', :to => 'pages#services'
 
   
-  match '/signup',  :to => 'staff_members#signup'
-  match '/signin',  :to => 'staff_members#signin'
+  match '/signup',  :to => 'staff_members#new'
+  match '/signin',  :to => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
