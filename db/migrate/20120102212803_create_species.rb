@@ -18,5 +18,6 @@ class CreateSpecies < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :species, [:staff_member_id, :created_at]
   end
 end

@@ -3,6 +3,7 @@ Sbic::Application.routes.draw do
   
   root :to => 'pages#home'
   resources :staff_members
+  resources :species
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/about_us', :to => 'pages#about_us'
@@ -13,6 +14,8 @@ Sbic::Application.routes.draw do
   match '/signup',  :to => 'staff_members#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+
+  match '/record',  :to => 'species#new'
 
   
 

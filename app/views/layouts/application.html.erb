@@ -23,8 +23,9 @@
         <nav class="round">
           <ul>
             <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "View Species", '#' %></li>
             <% if signed_in? %>
-            <li><%= link_to "Record Species", '#' %></li>
+            <li><%= link_to "Record Species", record_path %></li>
             <% end %>
             <% if signed_in? %>
             <li><%= link_to "Staff Members", staff_members_path %></li>

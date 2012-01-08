@@ -1,0 +1,11 @@
+<h1>All Staff Members</h1>
+
+<%= will_paginate %>
+
+<ul class="staff_members">
+  <% @staff_members.each do |staff_member| %>
+    <%= render staff_member %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

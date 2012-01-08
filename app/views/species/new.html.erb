@@ -1,0 +1,23 @@
+<h1>Record Species</h1>
+
+
+<%= simple_form_for @species do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <%= f.input :species_name %>
+  <%= f.input :state %>
+  <%= f.input :abundance %>
+  <%= f.input :location %>
+  <%= f.input :county %>
+  <%= f.input :grid_reference %>
+  <%= f.input :provenance %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :observer %>
+  <%= f.input :determiner %>
+  <%= f.input :record_type %>
+  <%= f.input :reference %>
+  <%= f.input :comment %>
+<%= f.button :submit %>
+<% end %>
+
