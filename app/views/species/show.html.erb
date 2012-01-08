@@ -1,14 +1,14 @@
-<table class="profile" summary="Profile information">
+<table class="species" summary="Species information">
   <tr>
     <td class="main">
       <h1>
-        <%= gravatar_for @staff_member %>
-        <%= @staff_member.surname%>
+        
+        <%= @species.species_name %>
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Surname</strong> <%= @staff_member.surname %><br />
-      <strong>URL</strong>  <%= link_to staff_member_path(@staff_member), @staff_member %>
+      <strong>Species Name</strong> <%= @species.species_name %><br />
+      <strong>URL</strong>  <%= link_to species_path(@species), @species %>
     </td>
   </tr>
 </table>

@@ -1,42 +1,21 @@
-<h1>Edit Staff Member Details</h1>
+<h1>Edit Species Details</h1>
 
-<%= form_for(@staff_member) do |f| %>
+<%= simple_form_for @species do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  
-  <div class="field">
-    <%= f.label :staff_id %><br /> 
-    <%= f.text_field :staff_id %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation, "Password Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
 
-<div>
-  <%= gravatar_for @staff_member %>
-  <a href="http://gravatar.com/emails">change</a>
-</div>
+  <%= f.input :species_name, :collection => [ "11-spot Ladybird", "13-spot Ladybird", "14-spot Ladybird", "16-spot Ladybird", "18-spot Ladybird", "19-spot Ladybird", "22-spot Ladybird", "24-spot Ladybird", "45 Khz Pipistrelle", "4-Banded Digger Wasp", "4-spotted Digger Wasp", "55 Khz Pipistrelle", "6-spotted Longhorn", "6-banded Nomad Bee", "Abax Parallelepipedus", "Abdera biflexuosa", "Abdera flexuosa" ] %>
+  <%= f.input :state, :collection => [ "Individual", "Present", "Adult", "Adult Female", "Adult Male", "Breeding Pair", "Burrow", "Copulating Pair", "Default", "Droppings" ] %>
+  <%= f.input :abundance %>
+  <%= f.input :location %>
+  <%= f.input :county, :collection => [ "Surrey", "Hampshire", "North Hampshire", "West Sussex", "East Sussex", "East Kent", "West Kent", "Unknown" ], :include_blank => false %>
+  <%= f.input :grid_reference %>
+  <%= f.input :provenance, :collection => [ "Indigenous", "Non-indigenous", "Alien", "Native", "Naturalised", "Vagrant" ] %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :observer %>
+  <%= f.input :determiner %>
+  <%= f.input :record_type, :collection => [ "Field Record", "Artificial Substrate", "Auditory Record", "Aural Bat Detector", "Baited", "Beaten" ] %>
+  <%= f.input :reference %>
+  <%= f.input :comment %>
+<%= f.button :submit %>
+<% end %>

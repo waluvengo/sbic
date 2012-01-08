@@ -25,7 +25,8 @@
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "View Species", '#' %></li>
             <% if signed_in? %>
-            <li><%= link_to "Record Species", record_path %></li>
+            <li><%= link_to "Record Species", '#' %></li>
+            <li><%= link_to "Edit Species", '#' %></li>
             <% end %>
             <% if signed_in? %>
             <li><%= link_to "Staff Members", staff_members_path %></li>
@@ -34,7 +35,6 @@
             <% end %>
 	    <li><%= link_to "About us", about_us_path %></li>
             <li><%= link_to "Services", services_path %></li>
-            <li><%= link_to "Help", help_path %></li>
             <% if signed_in? %>
             <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
             <% else %>
