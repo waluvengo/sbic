@@ -4,7 +4,10 @@
 
 <ul class="species">
   <% @species.each do |species| %>
-    <%= render species %>
+    <li>
+    <%= link_to species.species_name, species %>
+    
+    </li>
   <% end %>
 </ul>
 

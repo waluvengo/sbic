@@ -191,6 +191,14 @@ ul.staff_members {
   list-style: none;
 }
 
+ul.species {
+  margin-top: 1em;
+}
+
+.species li {
+  list-style: none;
+}
+
 .error_messages ul{
 margin: 0;
 }

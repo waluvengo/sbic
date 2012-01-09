@@ -1,9 +1,9 @@
 class SpeciesController < ApplicationController
-
   
   def index
-    @title = "All Species"
-    @species = Species.paginate(:page => params[:page])
+  @title = "All species"  
+  @species = Species.paginate(:page => params[:page])    
+      
   end  
 
   def show
@@ -43,7 +43,7 @@ class SpeciesController < ApplicationController
 
   def destroy
     Species.find(params[:id]).destroy
-    flash[:success] = "Sspecies Record Deleted."
+    flash[:success] = "Species Record Deleted."
     redirect_to species_path
   end
 end

@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <header>
-        <%= image_tag("logo.png", :alt => "Surrey Biodiversity Information Centre                                            ", :class => "round") %>
+        <%= image_tag("logo.png", :alt => "Surrey Biodiversity Information Centre", :class => "round") %>
 
       </header>
       <header>
@@ -23,9 +23,9 @@
         <nav class="round">
           <ul>
             <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "View Species", '#' %></li>
+            <li><%= link_to "View Species", species_index_path %></li>
             <% if signed_in? %>
-            <li><%= link_to "Record Species", '#' %></li>
+            <li><%= link_to "Record Species", new_species_path %></li>
             <li><%= link_to "Edit Species", '#' %></li>
             <% end %>
             <% if signed_in? %>
