@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107201333) do
+ActiveRecord::Schema.define(:version => 20120116123855) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20120107201333) do
     t.string   "enquirer_name"
     t.string   "enquirer_email"
     t.string   "enquirer_address"
-    t.string   "anquirer_postcode"
-    t.date     "enquiry_date"
+    t.string   "enquirer_postcode"
+    t.date     "feedback_due_date"
     t.string   "enquiry_title"
     t.text     "enquiry_details"
     t.string   "enquiry_nature"
@@ -49,6 +49,21 @@ ActiveRecord::Schema.define(:version => 20120107201333) do
     t.datetime "updated_at"
   end
 
+  create_table "sightings", :force => true do |t|
+    t.string   "species_name"
+    t.string   "state"
+    t.integer  "abundance"
+    t.string   "location"
+    t.string   "grid_reference"
+    t.date     "observation_date"
+    t.string   "observer"
+    t.string   "email"
+    t.integer  "telephone"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "species", :force => true do |t|
     t.string   "species_name"
     t.string   "state"
@@ -66,6 +81,10 @@ ActiveRecord::Schema.define(:version => 20120107201333) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "staff_members", :force => true do |t|

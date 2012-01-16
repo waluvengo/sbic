@@ -2,8 +2,19 @@
   <tr>
     <td class="main">
       <h1>
-        
-        <%= @species.species_name %>
+       <%= image_tag @species.photo.url %>
+        <h3><b>Species Name: </b><%= @species.species_name %></h3>
+        <p><b>State: </b><%= @species.state %></p>
+        <p><b>Abundance: </b><%= @species.abundance %></p>
+        <p><b>Location: </b><%= @species.location %></p>
+        <p><b>County: </b><%= @species.county %></p>
+        <p><b>Grid Reference: </b><%= @species.grid_reference %></p>
+        <p><b>Start date: </b><%= @species.start_date %></p>
+        <p><b>End date: </b><%= @species.end_date %></p>
+        <p><b>Observer: </b><%= @species.observer %></p>
+        <p><b>Determiner: </b><%= @species.determiner %></p>
+        <p><b>Record Type: </b><%= @species.record_type %></p>
+        <p><b>Reference: </b><%= @species.reference %></p>
       </h1>
     </td>
     <td class="sidebar round">

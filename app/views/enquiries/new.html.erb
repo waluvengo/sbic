@@ -1,0 +1,18 @@
+<h1>Submit an Enquiry</h1>
+
+<%= simple_form_for @enquiry, :html => { :multipart => true }  do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <%= f.input :enquirer_name %>
+  <%= f.input :enquirer_email %>
+  <%= f.input :enquirer_address %>
+  <%= f.input :enquirer_postcode %>
+  <%= f.input :feedback_due_date %>
+  <%= f.input :enquiry_title %>
+  <%= f.input :enquiry_details %>
+  <%= f.input :enquiry_nature, :collection => [ "Commercial", "Non-commercial" ], :include_blank => false %>
+  <%= f.input :grid_reference %>
+  <%= f.input :search_area_size %>
+  <%= f.button :submit %>
+<% end %>
+

@@ -3,7 +3,12 @@
     <td class="main">
       <h1>
         <%= gravatar_for @staff_member %>
-        <%= @staff_member.surname%>
+        
+        <h3><b>Surname: </b><%= @staff_member.surname %></h3>
+        <p><b>First Name: </b><%= @staff_member.first_name %></p>
+        <p><b>Title: </b><%= @staff_member.title %></p>
+        <p><b>Email: </b><%= @staff_member.email %></p>
+        
       </h1>
     </td>
     <td class="sidebar round">

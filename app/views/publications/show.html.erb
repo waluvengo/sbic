@@ -1,0 +1,23 @@
+<table class="publication" summary="Publication Details">
+  <tr>
+    <td class="main">
+      <h1>
+        
+        <h3><b>Title: </b><%= @publication.publication_name %></h3>
+        <p><b>ISBN: </b><%= @publication.isbn %></p>
+        <p><b>Year: </b><%= @publication.publication_year %></p>
+        <p><b>Author: </b><%= @publication.author %></p>
+        <p><b>Publisher: </b><%= @publication.publisher %></p>
+        <p><b>Pages: </b><%= @publication.pages %></p>
+        <p><b>Availability: </b><%= @publication.availability %></p>
+
+
+
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Title</strong> <%= @publication.publication_name %><br />
+      <strong>URL</strong>  <%= link_to publication_path(@publication), @publication %>
+    </td>
+  </tr>
+</table>

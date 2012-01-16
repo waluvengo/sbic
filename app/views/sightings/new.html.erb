@@ -1,0 +1,19 @@
+<h1>Record Sighting</h1>
+
+<%= simple_form_for @sighting, :html => { :multipart => true } do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <%= f.input :species_name, :collection => [ "11-spot Ladybird", "13-spot Ladybird", "14-spot Ladybird", "16-spot Ladybird", "18-spot Ladybird", "19-spot Ladybird", "22-spot Ladybird", "24-spot Ladybird", "45 Khz Pipistrelle", "4-Banded Digger Wasp", "4-spotted Digger Wasp", "55 Khz Pipistrelle", "6-spotted Longhorn", "6-banded Nomad Bee", "Abax Parallelepipedus", "Abdera biflexuosa", "Abdera flexuosa" ] %>
+  <%= f.input :state, :collection => [ "Individual", "Present", "Adult", "Adult Female", "Adult Male", "Breeding Pair", "Burrow", "Copulating Pair", "Default", "Droppings" ] %>
+  <%= f.input :abundance %>
+  <%= f.input :location %>
+  <%= f.input :grid_reference %>
+  <%= f.input :observation_date %>
+  <%= f.input :observer %>
+  <%= f.input :email %>
+  <%= f.input :telephone %>
+  <%= f.input :comment %>
+  Attach Photo<%= f.file_field :photo %>
+  <%= f.button :submit %>
+  <% end %>
+

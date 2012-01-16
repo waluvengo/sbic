@@ -1,0 +1,11 @@
+<h1>All Enquiries</h1>
+
+<%= will_paginate %>
+
+ <ul class="enquiries">
+  <% @enquiries.each do |enquiry| %>
+     <%= link_to enquiry.enquiry_title, enquiry %><br />
+  <% end %>
+ </ul>
+ 
+<%= will_paginate %>

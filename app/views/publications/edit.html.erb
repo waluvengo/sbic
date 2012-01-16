@@ -1,0 +1,13 @@
+<h1>Edit Publication Details</h1>
+
+<%= simple_form_for @publication do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <%= f.input :publication_name %>
+  <%= f.input :isbn %>
+  <%= f.input :publication_year %>
+  <%= f.input :author %>
+  <%= f.input :publisher %>
+  <%= f.input :pages %>
+  <%= f.input :availability, :collection => [ "Available", "Out of stock" ], :include_blank => false %>
+  <%= f.button :submit %>
+<% end %>

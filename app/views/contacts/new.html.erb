@@ -1,0 +1,30 @@
+<h1>Contact Us</h1>
+
+
+For more information, please contact:<br />
+Alistair Kirk,<br />
+SBIC Manager<br />
+Letter	Surrey Biodiversity Information Centre, <br />
+c/o Surrey Wildlife Trust, School Lane, Pirbright, Woking, Surrey, GU24 0JN<br />
+Telephone:	01483 795448<br />
+Email:	alistair.kirk@surreywt.org.uk<br /> <br />
+
+Please send data search enquiries and wildlife sightings to:<br /><br />
+Catherine Burton,<br />
+Biological Records Officer<br />
+Letter	Surrey Biodiversity Information Centre, <br />
+c/o Surrey Wildlife Trust, School Lane, Pirbright, Woking, Surrey, GU24 0JN<br />
+Telephone:	01483 795448<br />
+Email:	catherine.burton@surreywt.org.uk<br /><br />
+You may also use the form below to contact us.<br /><br />
+<hr>
+<h3>Contact Form</h3>
+<%= simple_form_for @contact, :html => { :multipart => true } do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :subject %>
+  <%= f.input :comment %>
+  <%= f.button :submit %>
+<% end %>
+

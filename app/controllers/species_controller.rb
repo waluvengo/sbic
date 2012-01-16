@@ -1,5 +1,6 @@
 class SpeciesController < ApplicationController
   
+
   def index
   @title = "All species"  
   @species = Species.paginate(:page => params[:page])    

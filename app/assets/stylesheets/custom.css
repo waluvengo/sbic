@@ -1,9 +1,9 @@
 .container {
-  width: 710px;
+  width: 800px;
 }
 
 body {
-  background: #cff;
+  background: #fff;
 }
 
 header {
@@ -29,17 +29,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #006400;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #006400;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #006400;
 }
 
 /* Navigation */
@@ -71,10 +71,11 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #006400;
 }
 
 nav ul li a:hover {
+  color: #228B22;
   text-decoration: underline;
 }
 
@@ -122,12 +123,12 @@ table.profile {
 }
 
 td.main {
-  width: 70%;
-  padding: 1em;
+  width: 75%;
+  padding: none;
 }
 
 td.sidebar {
-  width: 30%;
+  width: 25%;
   padding: 1em;
   vertical-align: top;
   background: #ffc;
@@ -210,7 +211,7 @@ margin: 0;
 
 .simple_form label{
   float: left;
-  width:120px;
+  width:135px;
   text-align:right;
   margin: 2px;
 }

@@ -1,9 +1,14 @@
 Sbic::Application.routes.draw do
   
   
+ 
   root :to => 'pages#home'
   resources :staff_members
   resources :species
+  resources :publications
+  resources :sightings, :only => [:index, :show, :new, :create, :destroy]
+  resources :contacts, :only => [:index, :show, :new, :create, :destroy]
+  resources :enquiries, :only => [:index, :show, :new, :create, :destroy]
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/about_us', :to => 'pages#about_us'
@@ -15,6 +20,7 @@ Sbic::Application.routes.draw do
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/edit', :to => 'species#edit'
+  
 
 
   # The priority is based upon order of creation:

@@ -1,0 +1,11 @@
+<h1>All Sightings</h1>
+
+<%= will_paginate %>
+
+<ul class="sightings">
+  <% @sightings.each do |sighting| %>
+    <%= link_to sighting.species_name, sighting %><br />
+  <% end %>
+</ul>
+
+<%= will_paginate %>

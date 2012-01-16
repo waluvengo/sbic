@@ -1,0 +1,14 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        
+        <%= @sighting.species_name%>
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Sighting</strong> <%= @sighting.species_name %><br />
+      <strong>URL</strong>  <%= link_to sighting_path(@sighting), @sighting %>
+    </td>
+  </tr>
+</table>

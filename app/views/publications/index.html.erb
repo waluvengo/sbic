@@ -1,0 +1,11 @@
+<h1>All Publications</h1>
+
+<%= will_paginate %>
+
+ <ul class="publications">
+  <% @publications.each do |publication| %>
+     <%= link_to publication.publication_name, publication %> <br />
+  <% end %>
+ </ul>
+ 
+<%= will_paginate %>

@@ -17,5 +17,6 @@
   <%= f.input :record_type, :collection => [ "Field Record", "Artificial Substrate", "Auditory Record", "Aural Bat Detector", "Baited", "Beaten" ] %>
   <%= f.input :reference %>
   <%= f.input :comment %>
-<%= f.button :submit %>
+  <%= f.file_field :photo %>
+  <%= f.button :submit %>
 <% end %>

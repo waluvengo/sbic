@@ -1,0 +1,18 @@
+<table class="contact" summary="Contact Details">
+  <tr>
+    <td class="main">
+      <h1>
+
+        <h3><b>Contact Subject: </b><%= @contact.subject %></h3>
+        <p><b>Comment: </b><%= @contact.comment %></p>
+        <p><b>Name: </b><%= @contact.name %></p>
+        <p><b>Email: </b><%= @contact.email %></p>
+        
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @contact.name %><br />
+      <strong>URL</strong>  <%= link_to contact_path(@contact), @contact %>
+    </td>
+  </tr>
+</table>

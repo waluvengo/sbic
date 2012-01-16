@@ -5,6 +5,7 @@
 <ul class="species">
   <% @species.each do |species| %>
     <li>
+    <%= image_tag species.photo.url %>
     <%= link_to species.species_name, species %>
     
     </li>

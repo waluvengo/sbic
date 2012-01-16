@@ -1,0 +1,19 @@
+<table class="enquiry" summary="Enquiry Details">
+  <tr>
+    <td class="main">
+      <h1>
+        
+        <h3><b>Enquiry Title: </b><%= @enquiry.enquiry_title %></h3>
+        <p><b>Enquiry Details: </b><%= @enquiry.enquiry_details %></p>
+        <p><b>Grid Reference: </b><%= @enquiry.grid_reference %></p>
+        <p><b>Feedback Due Date: </b><%= @enquiry.feedback_due_date %></p>
+        <p><b>Search Area Size: </b><%= @enquiry.search_area_size %></p>
+        <p><b>Enquirer Name: </b><%= @enquiry.enquirer_name %></p>
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @enquiry.enquirer_name %><br />
+      <strong>URL</strong>  <%= link_to enquiry_path(@enquiry), @enquiry %>
+    </td>
+  </tr>
+</table>

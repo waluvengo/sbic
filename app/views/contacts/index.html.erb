@@ -1,0 +1,11 @@
+<h1>All Contacts</h1>
+
+<%= will_paginate %>
+
+ <ul class="contacts">
+  <% @contacts.each do |contact| %>
+     <%= link_to contact.name, contact %><br />
+  <% end %>
+ </ul>
+ 
+<%= will_paginate %>

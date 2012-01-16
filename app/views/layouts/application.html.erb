@@ -14,49 +14,73 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <%= image_tag("logo.png", :alt => "Surrey Biodiversity Information Centre", :class => "round") %>
-
-      </header>
-      <header>
-
-        <nav class="round">
+  <div class="span-20" align="right">
+ <nav>
           <ul>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "View Species", species_index_path %></li>
-            <% if signed_in? %>
-            <li><%= link_to "Record Species", new_species_path %></li>
-            <li><%= link_to "Edit Species", '#' %></li>
-            <% end %>
-            <% if signed_in? %>
-            <li><%= link_to "Staff Members", staff_members_path %></li>
-            <li><%= link_to "Profile", current_staff_member %></li>
-            <li><%= link_to "Settings", edit_staff_member_path(current_staff_member) %></li>
-            <% end %>
-	    <li><%= link_to "About us", about_us_path %></li>
-            <li><%= link_to "Services", services_path %></li>
+            
             <% if signed_in? %>
             <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
             <% else %>
+            <li><%= link_to "Sign up", signup_path %></li>
             <li><%= link_to "Sign in", signin_path %></li>
             <% end %>
           </ul>
         </nav>
-      </header>
+  </div>
+<div class="span-20">
+       <%= image_tag("banner.png", :alt => "Surrey Biodiversity Information Centre more place holder text") %>
+  </div>
+<div class="span-20">
+       <nav>
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About us", about_us_path %></li>
+            <li><%= link_to "Services", services_path %></li>
+            <li><%= link_to "View Species", species_index_path %></li>
+            <li><%= link_to "Submit Sighting", new_sighting_path %></li>
+            <li><%= link_to "Submit enquiry", new_enquiry_path %></li>
+            <li><%= link_to "Contact us", new_contact_path %></li>
+
+            <% if signed_in? %>
+            <li><%= link_to "Record Species", new_species_path %></li>
+            <li><%= link_to "Sightings", sightings_path %></li>
+            <li><%= link_to "Enquiries", enquiries_path %></li>
+            
+            <% end %>
+	    
+            
+          </ul>
+        </nav>
+  </div>
+             <hr>
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>
         <%= yield %>
       </section>
-      <footer>
-        <nav class="round">
+
+
+       
+
+      <div class="span-20" align="center">
+<hr>
+        <nav>
           <ul>
-            <li><%= link_to "Home", root_path %></li>
+
+            
 	    <li><%= link_to "About us", about_us_path %></li>
+            <% if signed_in? %>
+            <li><%= link_to "Staff Members", staff_members_path %></li>
+            <li><%= link_to "Profile", current_staff_member %></li>
+            <li><%= link_to "Settings", edit_staff_member_path(current_staff_member) %></li>
+            <li><%= link_to "Contacts", contacts_path %></li>
+            <% end %>
+
+
           </ul>
         </nav>
-      </footer>
+       </div>
     </div>
   </body>
 </html>
