@@ -29,8 +29,8 @@ def index
 
   def destroy
     Enquiry.find(params[:id]).destroy
-    flash[:success] = "enquiry Record Deleted."
-    redirect_to enquiry_path
+    flash[:success] = "Enquiry Record Deleted."
+    redirect_to enquiries_path
   end
 end
 

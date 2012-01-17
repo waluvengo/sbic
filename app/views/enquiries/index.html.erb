@@ -4,7 +4,13 @@
 
  <ul class="enquiries">
   <% @enquiries.each do |enquiry| %>
-     <%= link_to enquiry.enquiry_title, enquiry %><br />
+     <%= link_to enquiry.enquiry_title, enquiry %>
+
+      <% if signed_in? %>
+            | <%= link_to "delete", enquiry, :confirm => "Are you sure?", :method => :delete %>
+                    
+            <% end %><br />
+
   <% end %>
  </ul>
  

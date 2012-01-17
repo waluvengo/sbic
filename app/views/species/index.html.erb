@@ -7,8 +7,12 @@
     <li>
     <%= image_tag species.photo.url %>
     <%= link_to species.species_name, species %>
-    
-    </li>
+
+<% if signed_in? %>
+  | <%= link_to "edit", edit_species_path(species) %>
+  | <%= link_to "delete", species, :confirm => "Are you sure?", :method => :delete %>
+  <% end %>
+</li>
   <% end %>
 </ul>
 

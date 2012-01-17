@@ -4,8 +4,13 @@
 
  <ul class="publications">
   <% @publications.each do |publication| %>
-     <%= link_to publication.publication_name, publication %> <br />
-  <% end %>
+     <%= link_to publication.publication_name, publication %>
+
+<% if signed_in? %>
+  | <%= link_to "edit", edit_publication_path(publication) %>
+  | <%= link_to "delete", publication, :confirm => "Are you sure?", :method => :delete %>
+  <% end %><br>
+<% end %>
  </ul>
  
 <%= will_paginate %>

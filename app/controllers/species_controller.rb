@@ -33,9 +33,10 @@ class SpeciesController < ApplicationController
   end
 
   def update
+    @species = Species.find(params[:id])
     if @species.update_attributes(params[:species])
       flash[:success] = "species updated."
-      redirect_to @species
+      redirect_to species_index_path
     else
       @title = "Edit species"
       render 'edit'
@@ -45,6 +46,6 @@ class SpeciesController < ApplicationController
   def destroy
     Species.find(params[:id]).destroy
     flash[:success] = "Species Record Deleted."
-    redirect_to species_path
+    redirect_to species_index_path
   end
 end

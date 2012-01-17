@@ -28,7 +28,6 @@ class SightingsController < ApplicationController
   def destroy
     Sighting.find(params[:id]).destroy
     flash[:success] = "Species Record Deleted."
-    redirect_to species_path
+    redirect_to sightings_path
   end
-
 end

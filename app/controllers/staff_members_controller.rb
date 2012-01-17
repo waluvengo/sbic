@@ -35,13 +35,15 @@ class StaffMembersController < ApplicationController
   end
 
   def edit
+    @staff_member = StaffMember.find(params[:id])
     @title = "Edit user"
   end
 
   def update
+    @staff_member = StaffMember.find(params[:id])
     if @staff_member.update_attributes(params[:staff_member])
       flash[:success] = "Profile updated."
-      redirect_to @staff_member
+      redirect_to staff_members_path
     else
       @title = "Edit user"
       render 'edit'

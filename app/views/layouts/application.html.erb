@@ -40,11 +40,11 @@
             <li><%= link_to "Submit Sighting", new_sighting_path %></li>
             <li><%= link_to "Submit enquiry", new_enquiry_path %></li>
             <li><%= link_to "Contact us", new_contact_path %></li>
-
+            
             <% if signed_in? %>
             <li><%= link_to "Record Species", new_species_path %></li>
             <li><%= link_to "Sightings", sightings_path %></li>
-            <li><%= link_to "Enquiries", enquiries_path %></li>
+           
             
             <% end %>
 	    
@@ -68,13 +68,14 @@
         <nav>
           <ul>
 
-            
-	    <li><%= link_to "About us", about_us_path %></li>
-            <% if signed_in? %>
+            <li><%= link_to "Our Publications", publications_path %></li>
+	    <% if signed_in? %>
+            <li><%= link_to "New Publication", new_publication_path %></li>
             <li><%= link_to "Staff Members", staff_members_path %></li>
             <li><%= link_to "Profile", current_staff_member %></li>
             <li><%= link_to "Settings", edit_staff_member_path(current_staff_member) %></li>
             <li><%= link_to "Contacts", contacts_path %></li>
+            <li><%= link_to "Enquiries", enquiries_path %></li>
             <% end %>
 
 

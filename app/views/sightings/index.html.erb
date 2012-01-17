@@ -4,8 +4,14 @@
 
 <ul class="sightings">
   <% @sightings.each do |sighting| %>
-    <%= link_to sighting.species_name, sighting %><br />
-  <% end %>
-</ul>
+    <%= link_to sighting.species_name, sighting %>
 
+  <% if signed_in? %>
+  | <%= link_to "Delete", sighting, :confirm => "Are you sure?", :method => :delete %>
+<% end %><br />
+<% end %>
+</ul>
 <%= will_paginate %>
+
+
+  

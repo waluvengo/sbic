@@ -27,14 +27,15 @@ class PublicationsController < ApplicationController
   end
 
   def edit
-    @publication = Publication.find(params[:id])
-    @title = "Edit publication"
+        @publication = Publication.find(params[:id])
+        @title = "Edit publication"
   end
 
   def update
-    if @publication.update_attributes(params[:publication])
+   @publication = Publication.find(params[:id])
+      if @publication.update_attributes(params[:publication])
       flash[:success] = "publication updated."
-      redirect_to @publication
+      redirect_to publications_path
     else
       @title = "Edit publication"
       render 'edit'
@@ -44,6 +45,7 @@ class PublicationsController < ApplicationController
   def destroy
     Publication.find(params[:id]).destroy
     flash[:success] = "publication Record Deleted."
-    redirect_to publication_path
+    redirect_to publications_path
   end
 end
+
